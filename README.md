@@ -19,7 +19,7 @@ $ npm install @windix/npm-tiny
 const tiny = require("@windix/npm-tiny");
 
 tiny('So much space!');
-//=> "helloworld"
+//=> "Somuchspace!"
 
 tiny(123);
 //=> Uncaught TypeError: tiny expects a string!
