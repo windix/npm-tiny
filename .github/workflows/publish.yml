@@ -25,6 +25,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@windix'
       - run: yarn install
+      - run: git config --global user.email "windix@gmail.com" && git config --global user.name "Windix Feng (via Github Actions)"
       - run: yarn version --minor
       - run: git push
       - run: yarn publish
