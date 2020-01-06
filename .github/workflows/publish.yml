@@ -25,6 +25,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@windix'
       - run: yarn install
+      - run: yarn version --minor
+      - run: git push
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
