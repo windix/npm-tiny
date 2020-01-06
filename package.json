@@ -1,6 +1,6 @@
 {
-  "name": "@windix/npm-tiny",
-  "version": "1.3.0",
+  "name": "@windix/npm-tiny-private",
+  "version": "1.5.0",
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
