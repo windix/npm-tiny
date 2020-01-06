@@ -1,6 +1,6 @@
 {
   "name": "@windix/npm-tiny-private",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
@@ -9,5 +9,7 @@
   "scripts": {
     "test": "jest"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
