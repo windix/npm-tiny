@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -25,9 +25,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@windix'
       - run: yarn install
-      - run: git config --global user.email "windix@gmail.com" && git config --global user.name "Windix Feng (via Github Actions)"
+      - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
       - run: yarn version --minor
-      - run: git push
+      - run: git push --tags
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
