@@ -1,0 +1,8 @@
+steps:
+  - label: 'test'
+    commands:
+      - 'yarn install'
+      - 'yarn test'
+    plugins:
+      - docker#v3.5.0:
+          image: 'node:12'
